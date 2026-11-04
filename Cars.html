@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>السيارات والحجز | Car Rental</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+    <h1>السيارات المتوفرة</h1>
+    <div>
+        <a href="home.html">الرئيسية</a> | 
+        <a href="AboutUs.html">من نحن</a> | 
+        <a href="Cars.html">السيارات</a>
+    </div>
+    <hr />
+    
+    <table>
+        <tr>
+            <th>الرمز</th>
+            <th>الموديل</th>
+            <th>سنة الصنع</th>
+            <th>السعر اليومي</th>
+            <th>إظهار التفاصيل</th>
+            <th>اختيار</th>
+        </tr>
+        <!-- سيارة 1 -->
+        <tr>
+            <td>CR-001</td>
+            <td>Toyota Corolla</td>
+            <td>2023</td>
+            <td>250000 ل.س</td>
+            <td><input type="checkbox" class="details-toggle" id="detail-1" /></td>
+            <td><input type="checkbox" class="car-select" data-price="250000" data-model="Toyota Corolla" /></td>
+        </tr>
+        <tr class="details-row" id="info-1">
+            <td colspan="6">الوقود: بنزين | ناقل الحركة: أوتوماتيك | المقاعد: 5 | العداد: 15000 كم | اللون: أبيض</td>
+        </tr>
+        <!-- سيارة 2 -->
+        <tr>
+            <td>CR-002</td>
+            <td>Kia Sportage</td>
+            <td>2022</td>
+            <td>400000 ل.س</td>
+            <td><input type="checkbox" class="details-toggle" id="detail-2" /></td>
+            <td><input type="checkbox" class="car-select" data-price="400000" data-model="Kia Sportage" /></td>
+        </tr>
+        <tr class="details-row" id="info-2">
+            <td colspan="6">الوقود: ديزل | ناقل الحركة: أوتوماتيك | المقاعد: 5 | العداد: 32000 كم | اللون: أسود</td>
+        </tr>
+        <!-- سيارة 3 -->
+        <tr>
+            <td>CR-003</td>
+            <td>Hyundai Elantra</td>
+            <td>2024</td>
+            <td>300000 ل.س</td>
+            <td><input type="checkbox" class="details-toggle" id="detail-3" /></td>
+            <td><input type="checkbox" class="car-select" data-price="300000" data-model="Hyundai Elantra" /></td>
+        </tr>
+        <tr class="details-row" id="info-3">
+            <td colspan="6">الوقود: بنزين | ناقل الحركة: أوتوماتيك | المقاعد: 5 | العداد: 5000 كم | اللون: فضي</td>
+        </tr>
+        <!-- سيارة 4 -->
+        <tr>
+            <td>CR-004</td>
+            <td>Chevrolet Spark</td>
+            <td>2021</td>
+            <td>180000 ل.س</td>
+            <td><input type="checkbox" class="details-toggle" id="detail-4" /></td>
+            <td><input type="checkbox" class="car-select" data-price="180000" data-model="Chevrolet Spark" /></td>
+        </tr>
+        <tr class="details-row" id="info-4">
+            <td colspan="6">الوقود: بنزين | ناقل الحركة: عادي | المقاعد: 4 | العداد: 60000 كم | اللون: أزرق</td>
+        </tr>
+        <!-- سيارة 5 -->
+        <tr>
+            <td>CR-005</td>
+            <td>Nissan Sunny</td>
+            <td>2020</td>
+            <td>150000 ل.س</td>
+            <td><input type="checkbox" class="details-toggle" id="detail-5" /></td>
+            <td><input type="checkbox" class="car-select" data-price="150000" data-model="Nissan Sunny" /></td>
+        </tr>
+        <tr class="details-row" id="info-5">
+            <td colspan="6">الوقود: بنزين | ناقل الحركة: عادي | المقاعد: 5 | العداد: 85000 كم | اللون: رمادي</td>
+        </tr>
+    </table>
+    
+    <input type="button" id="continue-btn" value="متابعة" />
+
+    <div id="booking-form-container">
+        <h2>نموذج الحجز</h2>
+        <form id="booking-form" action="">
+            <fieldset>
+                <legend>المعلومات الشخصية</legend>
+                <label for="fullname">الاسم الكامل:</label>
+                <input type="text" id="fullname" name="fullname" /><br /><br />
+                
+                <label for="nid">الرقم الوطني:</label>
+                <input type="text" id="nid" name="nid" required="required" /><br /><br />
+            </fieldset>
+            <fieldset>
+                <legend>معلومات التواصل والتأجير</legend>
+                <label for="mobile">رقم الموبايل:</label>
+                <input type="text" id="mobile" name="mobile" /><br /><br />
+                
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" /><br /><br />
+                
+                <label for="start_date">تاريخ البداية:</label>
+                <input type="date" id="start_date" name="start_date" required="required" /><br /><br />
+                
+                <label for="end_date">تاريخ النهاية:</label>
+                <input type="date" id="end_date" name="end_date" required="required" /><br /><br />
+            </fieldset>
+            <input type="submit" value="إرسال الطلب" />
+        </form>
+    </div>
+</body>
+</html>
